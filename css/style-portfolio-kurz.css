@@ -1,0 +1,478 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #173F32;
+    --color-background: #F7f7f5;
+    --color-text: #292C2B;
+    --color-text-white: #FFFFFF;
+    --color-hover: #355C4A;
+    --color-light: #F0F1EF;
+    --color-accent: #8FAF9B;
+    --container-width: 90%;
+    --content-max-width: 1200px;
+    --space-section: 80px;
+    --radius: 14px;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 30px;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: var(--color-background);
+    color: var(--color-text);
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: var(--container-width);
+    max-width: var(--content-max-width);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: var(--color-light);
+    color: var(--color-text);
+}
+
+.btn-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.btn-container p {
+    margin: 0;
+    padding: 12px 20px;
+    border: 1px solid var(--color-primary);
+    border-radius: 4px;
+    color: var(--color-primary);
+    background-color: var(--color-text-white);
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-text-white);
+    border-color: var(--color-primary);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-hover);
+    border-color: var(--color-hover);
+    color: var(--color-text-white);
+}
+
+.btn-secondary {
+    background-color: var(--color-text-white);
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.site-header {
+    background-color: var(--color-primary);
+    color: var(--color-text-white);
+    padding-bottom: 40px;
+}
+
+.site-header-official {
+    background-color: var(--color-primary);
+    color: var(--color-text-white);
+    padding-bottom: 20px;
+}
+
+.site-header nav.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.site-header-official nav.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+nav a {
+    color: var(--color-text-white);
+    text-decoration: none;
+}
+
+.name {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.navigation {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+}
+
+.navigation a:hover,
+.navigation a:focus,
+.active {
+    color: var(--color-accent);
+}
+
+.h1-uppercase {
+    padding-top: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+
+h3 {
+    color: var(--color-primary);
+    margin-top: 30px;
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+    align-items: start;
+    padding: 40px 0;
+}
+
+.contact.container {
+    width: 90%;
+    max-width: var(--content-max-width);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-info {
+    min-width: 0;
+}
+
+.contact-info span {
+    display: block;
+}
+
+.contact-info strong {
+    display: inline-block;
+    margin-bottom: 4px;
+}
+
+.form-wrapper {
+    width: 100%;
+    max-width: 400px;
+    min-width: 0;
+    margin: 0;
+    background-color: var(--color-text-white);
+    padding: 15px;
+    border-radius: var(--radius);
+}
+
+.form-wrapper form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-wrapper label {
+    display: block;
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+.form-wrapper input:not([type="checkbox"]):not([type="submit"]),
+.form-wrapper textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--color-accent);
+    border-radius: var(--radius);
+    background-color: var(--color-text-white);
+    color: var(--color-text);
+    font-family: inherit;
+    font-size: 16px;
+}
+
+.form-wrapper textarea {
+    min-height: 140px;
+    resize: vertical;
+    line-height: 1.5;
+}
+
+.form-wrapper input:focus,
+.form-wrapper textarea:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+    border-color: var(--color-primary);
+}
+
+.form-wrapper .checkbox-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 12px 0;
+}
+
+.form-wrapper .checkbox-wrapper input[type="checkbox"] {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    margin-top: 3px;
+    accent-color: var(--color-primary);
+    cursor: pointer;
+}
+
+.form-wrapper .checkbox-wrapper label {
+    margin-top: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.checkbox-wrapper a {
+    color: var(--color-primary);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.checkbox-wrapper a:hover {
+    color: var(--color-hover);
+}
+
+.checkbox-wrapper a:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
+}
+
+.form-wrapper button.btn-primary {
+    width: 100%;
+    align-self: stretch;
+    margin-top: 12px;
+    cursor: pointer;
+}
+
+.legal-notice {
+    padding-top: 30px;
+    height: 500px;
+}
+
+.data-protection {
+    padding-top: 30px;
+}
+
+.legal-notice a {
+    text-decoration: none;
+    color: var(--color-primary);
+}
+
+.data-protection a {
+    text-decoration: none;
+    color: var(--color-primary);
+}
+
+.site-footer {
+    background: var(--color-primary);
+    color: var(--color-text-white);
+    padding: 30px 0;
+}
+
+.footer-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.navigation-footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.footer-inner a {
+    color: var(--color-text-white);
+    text-decoration: none;
+}
+
+.footer-inner a:hover {
+    color: var(--color-accent);
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+.burger-menu {
+    display: block;
+    background: none;
+    border: none;
+    color: var(--color-text-white);
+    font-size: 28px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.navigation {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    width: 100%;
+}
+
+
+.form-error {
+    color: #b42318;
+    margin-top: 12px;
+}
+
+.form-error:empty {
+    display: none;
+}
+
+.form-success {
+    color: var(--color-primary);
+    background-color: var(--color-light);
+    padding: 16px;
+    margin-top: 20px;
+}
+
+
+@media (min-width: 401px) {
+    .container {
+        width: 90%;
+    }
+
+    .name {
+        font-size: 1.5rem;
+    }
+
+    .navigation {
+        gap: 16px;
+    }
+
+    .form-wrapper label {
+        font-size: 16px;
+    }
+
+    .form-wrapper input:not([type="checkbox"]):not([type="submit"]),
+    .form-wrapper textarea {
+        padding: 12px 14px;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 14px;
+    }
+}
+
+
+@media (min-width: 701px) {
+    :root {
+        --container-width: 80%;
+    }
+
+    .site-header nav.container {
+
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+        padding: 25px 0;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: auto;
+    }
+
+    .contact.container {
+        width: 80%;
+    }
+
+    .contact {
+        gap: 32px;
+    }
+
+    .footer-inner {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navigation-footer {
+        gap: 24px;
+    }
+}
+
+
+@media (min-width: 901px) {
+
+    .container {
+        width: 80%;
+    }
+
+    .site-header {
+        padding-bottom: 60px;
+    }
+
+    .contact {
+        grid-template-columns: minmax(0, 1fr) 400px;
+        gap: 60px;
+        padding: 60px 0;
+    }
+
+    .form-wrapper button.btn-primary {
+        width: auto;
+        align-self: flex-start;
+    }
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt – Elena Fomina | UX/UI & Digital Design</title>
+    <meta name="description" content="Kontaktiere Elena Fomina für Anfragen 
+    zu UX/UI Design, Webdesign und visueller Kommunikation. Ich freue mich auf 
+    interessante digitale Projekte.">
+    <link rel="stylesheet" href="../css/style-portfolio-kurz.css">
+</head>
+
+<body>
+    <header class="site-header">
+
+        <nav class="container">
+            <a href="../index.html" class="name">Elena Fomina</a>
+
+            <button class="burger-menu" aria-label="Menü öffnen" aria-expanded="false">
+                ☰
+            </button>
+
+            <div class="navigation">
+                <a href="../index.html">Projekte</a>
+                <a href="../html/ueber-mich.html">Über mich</a>
+                <a href="../html/kontakt.html">Kontakt</a>
+            </div>
+        </nav>
+        <section class="hero">
+            <div class="container hero-inner">
+
+                <div class="hero-text">
+                    <h1 class="h1-uppercase">
+                        Kontakt
+                    </h1>
+
+                    <p>
+                        <bold>Lass uns zusammenarbeiten.</bold>
+                    </p>
+
+                    <p>
+                        Du hast ein spannendes Projekt? Ich freue mich auf den Austausch
+                    </p>
+
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section class="contact container">
+
+            <div class="contact-info">
+                <strong>Elena Fomina</strong><br>
+                <span>Musterstraße 42</span>
+                <span>12345 Musterstadt</span>
+                <br>
+                <strong>e.fomina@yahoo.com</strong>
+                <br>
+                <strong>0123456789</strong>
+            </div>
+
+            <div class="form-wrapper">
+
+                <form id="contact-form" novalidate>
+                    <label for="firstname">Vorname</label>
+                    <input id="firstname" type="text" name="firstname" autocomplete="given-name" required>
+
+                    <label for="lastname">Nachname</label>
+                    <input id="lastname" type="text" name="lastname" autocomplete="family-name" required>
+
+                    <label for="email">E-Mail-Adresse</label>
+                    <input id="email" type="email" name="email" autocomplete="email" required>
+
+                    <label for="subject">Betreff</label>
+                    <input id="subject" type="text" name="subject" required>
+
+                    <label for="message">Nachricht</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <div class="checkbox-wrapper">
+                        <input id="privacy" type="checkbox" name="privacy" required>
+                        <label for="privacy">
+                            Ich akzeptiere die
+                            <a href="../html/datenschutz.html" target="_blank" rel="noopener noreferrer">
+                                Datenschutzerklärung.
+                            </a>
+                        </label>
+                    </div>
+
+                    <p id="form-error" class="form-error" role="alert"></p>
+
+                    <button type="submit" class="btn btn-primary">
+                        Nachricht senden
+                    </button>
+
+                    <p id="form-success" class="form-success" role="status" hidden>
+                        Vielen Dank für deine Nachricht! Ich melde mich so bald wie möglich.
+                    </p>
+                </form>
+
+            </div>
+
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© 2026 Elena Fomina</p>
+            <nav class="navigation-footer">
+                <a href="../html/datenschutz.html">Datenschutz</a>
+                <a href="../html/impressum.html">Impressum</a>
+            </nav>
+            <a href="#">Nach oben ↑</a>
+        </div>
+
+    </footer>
+
+    <script src="../js/jquery-4.0.0.min.js"></script>
+    <script src="../js/script.js"></script>
+
+</body>
+
+</html>
