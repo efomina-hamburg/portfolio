@@ -157,8 +157,6 @@ nav a {
     text-transform: uppercase;
 }
 
-
-
 h3 {
     color: var(--color-primary);
     margin-top: 30px;
@@ -181,6 +179,7 @@ h3 {
 
 .contact-info {
     min-width: 0;
+    min-height: 230px;
 }
 
 .contact-info span {
@@ -290,7 +289,7 @@ h3 {
 
 .legal-notice {
     padding-top: 30px;
-    height: 500px;
+    min-height: 350px;
 }
 
 .data-protection {
